@@ -41,7 +41,10 @@
 
 	// Show current rank after badge.
 	model.uienhancements_currentrank = ko.computed(function() {
-		return '#' + model.playerRatingInfo().LeaderboardPosition;
+		if(model.playerRatingInfo().LeaderboardPosition <= 0)
+			return '';
+		else
+			return '#' + model.playerRatingInfo().LeaderboardPosition;
 	});
 
 	$('#ladder_badge').append('<span data-bind="text: uienhancements_currentrank" style="position: relative; top: -.5em;"></span>')

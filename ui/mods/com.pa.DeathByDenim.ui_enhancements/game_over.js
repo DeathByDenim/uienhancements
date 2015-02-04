@@ -7,7 +7,10 @@
 
 		engine.asyncCall('ubernet.getPlayerRating', 'Ladder1v1').done(function (data) {
 			data = JSON.parse(data)
-			model.uienhancements_leaderBoardPosition(' (#' + data.LeaderboardPosition + ')');
+			if(data.LeaderboardPosition <= 0)
+				model.uienhancements_leaderBoardPosition('');
+			else
+				model.uienhancements_leaderBoardPosition(' (#' + data.LeaderboardPosition + ')');
 		});
 	};
 
