@@ -5,7 +5,7 @@
         "ui"
     ],
     "context": "client",
-    "date": "2015/01/26",
+    "date": "2015/02/10",
     "description": "Enhances the user interface with little tweaks.",
     "description_nl": "Verbetert de UI met kleine aanpassingen.",
     "description_de": "Verbessert kleine Sachen in der UI.",
@@ -38,7 +38,7 @@
         ]
     },
     "signature": "not yet implemented",
-    "version": "1.0",
+    "version": "1.0.1",
     "content_id": "com.pa.DeathByDenim.ui_enhancements",
     "store_id": "com.pahub.content.plugin.store.mod.client"
 }
