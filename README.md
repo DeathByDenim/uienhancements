@@ -6,7 +6,8 @@ Mod for Planetary Annihilation to enhance the UI. Currently it does the followin
   * Show rank in main menu after badge.
   * Focus the cursor on the password field in the main menu.
   * Remember filter settings in the server browser.
-  * Increase the time-out in the loading of replays from 5 seconds to 1 minute to fix unloadable replays.
+  * Adds Titan filter if you enable PA: Titans.
+  * Increase the time-out in the loading of replays from 10 seconds to 1 minute to fix unloadable replays.
   * Focus the cursor on the lobby ID field in the replay browser.
-  * Allow for <Enter> after manually entering a lobby ID to load it.
+  * Allow for &gt;Enter&lt; after manually entering a lobby ID to load it.
   * After playing a ranked match show your new rank in the game over screen.
