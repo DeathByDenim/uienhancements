@@ -59,6 +59,8 @@
 		model.regionFilter(filtersettings['regionFilter']);
 		model.gameTagFilter(filtersettings['gameTagFilter']);
 		model.lockedFilter(filtersettings['lockedFilter']);
+		model.bountyModeFilter(filtersettings['bountyModeFilter']);
+		model.moddedGameFilter(filtersettings['moddedGameFilter']);
 		if(api.content.usingTitans())
 			model.productFilter(filtersettings['product']);
 	}
@@ -78,7 +80,9 @@
 			'playerCountMaxFilter': model.playerCountMaxFilter(),
 			'regionFilter': model.regionFilter(),
 			'gameTagFilter': model.gameTagFilter(),
-			'lockedFilter': model.lockedFilter()
+			'lockedFilter': model.lockedFilter(),
+			'bountyModeFilter': model.bountyModeFilter(),
+			'moddedGameFilter': model.moddedGameFilter()
 		};
 		if(api.content.usingTitans())
 			filtersettings['product'] = model.productFilter();
