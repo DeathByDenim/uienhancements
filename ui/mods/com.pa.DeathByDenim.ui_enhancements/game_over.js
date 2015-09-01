@@ -5,7 +5,7 @@
 	model.getLeaderBoardPosition = function () {
 		model.uienhancements_leaderBoardPosition(' (#??)');
 
-		engine.asyncCall('ubernet.getPlayerRating', 'Ladder1v1').done(function (data) {
+		engine.asyncCall('ubernet.getPlayerRating', MatchmakingUtility.getMatchmakingType()).done(function (data) {
 			data = JSON.parse(data)
 			if(data.LeaderboardPosition <= 0)
 				model.uienhancements_leaderBoardPosition('');

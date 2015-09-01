@@ -47,7 +47,7 @@
 			return '#' + model.playerRatingInfo().LeaderboardPosition;
 	});
 
-	$('#ladder_badge').append('<span data-bind="text: uienhancements_currentrank" style="position: relative; top: -.5em;"></span>')
+	$('#ladder_badge').append('<div style="position: relative; width: 0; height: 0"><span data-bind="text: uienhancements_currentrank" style="position: absolute; top: .2em; left: 0em;"></span></div>')
 
 
 	// Focus cursor on password field.
