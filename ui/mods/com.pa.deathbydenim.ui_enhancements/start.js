@@ -21,20 +21,22 @@
 	$('.nav_item').each(
 		function(arg) {
 			var olddatabind = $(this).attr('data-bind');
+			if(olddatabind !== undefined) {
 
-			var newdatabind = olddatabind.replace('click: toggleSinglePlayerMenu', 'event: { mouseover: enableSinglePlayerMenu }');
-			if(newdatabind === olddatabind) {
-				newdatabind = olddatabind.replace('click: toggleMultiplayerMenu', 'event: { mouseover: enableMultiplayerMenu }');
+				var newdatabind = olddatabind.replace('click: toggleSinglePlayerMenu', 'event: { mouseover: enableSinglePlayerMenu }');
 				if(newdatabind === olddatabind) {
-					if($(this).parent().hasClass('nav_sub_item'))
-						return;
+					newdatabind = olddatabind.replace('click: toggleMultiplayerMenu', 'event: { mouseover: enableMultiplayerMenu }');
+					if(newdatabind === olddatabind) {
+						if($(this).parent().hasClass('nav_sub_item'))
+							return;
 
-					newdatabind = 'event: { mouseover: disableSubmenus }, ' + newdatabind;
-					
+						newdatabind = 'event: { mouseover: disableSubmenus }, ' + newdatabind;
+						
+					}
 				}
-			}
 
-			$(this).attr('data-bind', newdatabind)
+				$(this).attr('data-bind', newdatabind)
+			}
 		}
 	);
 
